@@ -177,17 +177,17 @@ def fetch_lyrics(song: str, artist: str):
         print("Lyrics fetched: Enhanced/word-level (or auto fallback synced)")
         return raw
 
-    # # Priority 2 → manual synced_only
-    # raw = search(query, synced_only=True)
-    # if raw:
-    #     print("Lyrics fetched: Synced only (manual fallback)")
-    #     return raw
+    # Priority 2 → manual synced_only
+    raw = search(query, synced_only=True)
+    if raw:
+        print("Lyrics fetched: Synced only (manual fallback)")
+        return raw
 
-    # # Priority 3 → plain
-    # raw = search(query, plain=True)
-    # if raw:
-    #     print("Lyrics fetched: Plain (no timestamps)")
-    #     return raw
+    # Priority 3 → plain
+    raw = search(query, plain=True)
+    if raw:
+        print("Lyrics fetched: Plain (no timestamps)")
+        return raw
 
     print("No lyrics found for this song.")
     return None
